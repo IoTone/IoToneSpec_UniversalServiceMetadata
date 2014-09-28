@@ -256,7 +256,7 @@ In survey of the possible existing alternatives, there are hints of solutions th
 
  
 
-## UPnP 1.1 Device Schema (Appendix B1) 
+## JSON-P
 
 
 In survey of the possible existing alternatives, there are other very good solutions.  In most cases, where XML is utilized, the "API Surface" for the definitions becomes vast.  The compute requirements for XML support may exceed the capabilities of certain devices in terms of processing and memory.  For these reasons, XML is discarded as the first choice for the USM solution.
@@ -269,6 +269,8 @@ Pro:
 Con:
    - It has serious security considerations
    - It lacks a formal definition
+
+## DNODE
 
 DNODE is a fascinating approach to RPC, that enables remote function execution. 
 Pro:
