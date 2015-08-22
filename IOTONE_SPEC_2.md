@@ -54,6 +54,7 @@ There are numerous standards of formal and ad-hoc approaches to defining remote 
 -   Doesn't duplicate an existing solution that is clearly already good enough
 -   Future proof through extensibility
 -   Secure as required
+-   Able to support a variety of standards without extension of the format
 
 # Implementation
 
@@ -150,7 +151,7 @@ The draft schema follows below. It was generated using a sample input into http:
                },
                "usm_service_endpoint":{
                   "type":"string",
-                       "id":"http://iotone.org/specs/2/schema/usm_services/0/usm_service_endpoint",
+                  "id":"http://iotone.org/specs/2/schema/usm_services/0/usm_service_endpoint",
                   "required":false
                },
                "usm_capabilities":{
@@ -158,6 +159,31 @@ The draft schema follows below. It was generated using a sample input into http:
                   "id":"http://iotone.org/specs/2/schema/usm_services/0/usm_capabilities",
                   "required":false
                },
+               "usm_profiles":{
+                  "type":"string",
+                  "id":"http://iotone.org/specs/2/schema/usm_services/0/usm_profiles",
+                  "required":false
+               },
+               "characteristics":[
+                 "characteric":[
+                   "usm_characteristic_id":{
+                       "type":"string",
+                       "id":"http://iotone.org/specs/2/schema/usm_services/0/usm_characteristic_id",
+                       "required":false
+                    },
+                    "usm_characteristic_format":{
+                       "type":"string",
+                       "id":"http://iotone.org/specs/2/schema/usm_services/0/usm_characteristic_format",
+                       "required":false
+                    },
+                    "usm_characteristic_constraints":{
+                       "type":"string",
+                       "id":"http://iotone.org/specs/2/schema/usm_services/0/usm_characteristic_constraints",
+                       "required":false
+                    },
+                  }
+               ],
+                },
                "usm_service_name":{
                   "type":"string",
                   "id":"http://iotone.org/specs/2/schema/usm_services/0/usm_service_name",
