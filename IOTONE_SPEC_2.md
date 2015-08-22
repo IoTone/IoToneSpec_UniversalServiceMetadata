@@ -39,7 +39,7 @@ The following primitves are:
 
 # Overview
 
-There are numerous standards of formal and ad-hoc approaches to defining remote interfaces with varying levels of granularity.  Some standards are defined by Standards bodies, with large amounts of work going into spages and pages of specification.  As well, the format of the data varies (IDL, xml, soap, xml schemas).  Because of these differences, there isn't a good universal approach on the market, making it possible to get stuck in committee based standards, stove pipe proprietary approaches, compute intensive approaches, or incompatible approaches.
+There are numerous standards of formal and ad-hoc approaches to defining remote service interfaces with varying levels of granularity.  Some standards are defined by Standards bodies, with large amounts of work going into spages and pages of specification.  As well, the format of the data varies (IDL, xml, soap, xml schemas).  Because of these differences, there isn't a good universal approach on the market, making it possible to get stuck in committee based standards, stove pipe proprietary approaches, compute intensive approaches, or incompatible approaches.
 
 # Requirements 
 
@@ -63,6 +63,7 @@ Within a "usm_services" defintion, one devices a "usm_service".  Each "usm_servi
    * an Object representing an API specification
    * an Array of API specifications
    * a String that is a path to a JSON file
+
 Each "usm_service" is defined by a single resource, params, and callback in a JSON array, where arg[0] is the resource, arg[1] is the params, and arg[2] is the callback.
 get: [resource, params, callback ]
 GET an API resource, with optional params object for the request, and an optional callback that looks like: function (err, response, body) { ... }.
@@ -76,7 +77,7 @@ delete: [resource, params, callback]
 
 Same usage as .get(), but sends a DELETE request.
 
-Users of USM are free to define custom attributes to meet needs not yet forseen.
+Users of USM are free to define custom attributes to meet needs not yet forseen.  Universal Device Metadata(UDM) Specification is defined as a microfotmat for defining devices.  It references USM.  A device may only choose to expose services and no device details, though it is recommended that for every service, it optionally include a link to the device hosting the service using UDM.
 
 # USM Schema
 
