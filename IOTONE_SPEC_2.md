@@ -1,9 +1,9 @@
-Universal Service Metadata (USM) Specification draft v0.9
+Universal Service Metadata (USM) Specification draft v0.9.1
 ========================================================
 
 This document is released under the terms of the [Apache 2.0 License](https://raw.githubusercontent.com/IoTone/IoToneSpec_UniversalServiceMetadata/master/LICENSE)
 
-Copyright 2014 IoTone, Inc.
+Copyright 2014-2015 IoTone, Inc.
 
 # Abstract
 
@@ -60,9 +60,9 @@ There are numerous standards of formal and ad-hoc approaches to defining remote 
 
 Within a "usm_services" defintion, one devices a "usm_service".  Each "usm_service" is defined by a "usm_service_spec", which can be:
 
-   • an Object representing an API specification
-   • an Array of API specifications
-   • a String that is a path to a JSON file
+   * an Object representing an API specification
+   * an Array of API specifications
+   * a String that is a path to a JSON file
 Each "usm_service" is defined by a single resource, params, and callback in a JSON array, where arg[0] is the resource, arg[1] is the params, and arg[2] is the callback.
 get: [resource, params, callback ]
 GET an API resource, with optional params object for the request, and an optional callback that looks like: function (err, response, body) { ... }.
@@ -144,11 +144,11 @@ The draft schema follows below. It was generated using a sample input into http:
                   "id":"http://iotone.org/specs/2/schema/usm_services/0/usm_type",
                   "required":false
                },
-       "usm_service_endpoint":{
+               "usm_service_endpoint":{
                   "type":"string",
                        "id":"http://iotone.org/specs/2/schema/usm_services/0/usm_service_endpoint",
                   "required":false
-    },
+               },
                "usm_capabilities":{
                   "type":"string",
                   "id":"http://iotone.org/specs/2/schema/usm_services/0/usm_capabilities",
@@ -164,11 +164,11 @@ The draft schema follows below. It was generated using a sample input into http:
                   "id":"http://iotone.org/specs/2/schema/usm_services/0/usm_copyright",
                   "required":false
                },
-        "usm_license":{
+               "usm_license":{
                   "type":"string",
                   "id":"http://iotone.org/specs/2/schema/usm_services/0/usm_license",
                   "required":false
-    },
+               },
                "usm_author":{
                   "type":"string",
                   "id":"http://iotone.org/specs/2/schema/usm_services/0/usm_author",
@@ -287,11 +287,11 @@ The USM solution provides flexibility and some options for a variety of implemen
 # Normative References 
 
 * JSON Spec - http://json.org/ 
-*  http://json-schema.org/latest/json-schema-core.html
-
+* http://json-schema.org/latest/json-schema-core.html
+* https://github.com/IoTone/IoToneSpec_UniversalDeviceMetadata/blob/master/IOTONE_SPEC_1.md
 # Non-Normative References 
 
 *  DNODE https://github.com/substack/dnode (DNODE), 
 *  JSON-P: https://github.com/jaubourg/jquery-jsonp/blob/master/doc/API.md and
 *  (UNIO): https://github.com/IoTone/unio
-*    Metadata Standards: https://en.wikipedia.org/wiki/Metadata_standards
+*  Metadata Standards: https://en.wikipedia.org/wiki/Metadata_standards
