@@ -238,7 +238,7 @@ The draft schema follows below. It was generated using a sample input into http:
 
 ```
 {
-   "usm_version":"0.9",
+   "usm_version":"0.9.1",
    "usm_serviceset_name": "mypersonalcloud"
    "usm_sevices": [
       {
