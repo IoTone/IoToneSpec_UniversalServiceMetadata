@@ -123,9 +123,9 @@ The draft schema follows below. It was generated using a sample input into http:
                   "id":"http://iotone.org/specs/2/schema/usm_services/0/usm_key",
                   "required":false
                },
-               "usm_guid":{
+               "usm_uuid":{
                   "type":"string",
-                  "id":"http://iotone.org/specs/2/schema/usm_services/0/usm_guid",
+                  "id":"http://iotone.org/specs/2/schema/usm_services/0/usm_uuid",
                   "required":false
                },
                "usm_schema_name":{
@@ -220,7 +220,7 @@ The draft schema follows below. It was generated using a sample input into http:
          "usm_service_name": "storage-cloud",
          "usm_version_number": "1.0.0",
          "usm_vendor": "Big Company, Inc",
-         "usm_guid": "10000001a",
+         "usm_uuid": "1a8748bd-9c13-46ab-a762-e463376a1f16",
          "usm_author": "rockstardev@abigcompany.com",
          "usm_type": "webserver",
          "usm_class":["object-storage"],
@@ -293,6 +293,8 @@ The USM solution provides flexibility and some options for a variety of implemen
 * JSON Spec - http://json.org/ 
 * http://json-schema.org/latest/json-schema-core.html
 * https://github.com/IoTone/IoToneSpec_UniversalDeviceMetadata/blob/master/IOTONE_SPEC_1.md
+* http://tools.ietf.org/html/rfc4122
+* 
 # Non-Normative References 
 
 *  DNODE https://github.com/substack/dnode (DNODE), 
