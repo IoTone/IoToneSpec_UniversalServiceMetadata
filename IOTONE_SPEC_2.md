@@ -36,7 +36,6 @@ The following primitves are:
 *    string
 >        A JSON string. 
 
-
 # Overview
 
 There are numerous standards of formal and ad-hoc approaches to defining remote service interfaces with varying levels of granularity.  Some standards are defined by Standards bodies, with large amounts of work going into spages and pages of specification.  As well, the format of the data varies (IDL, xml, soap, xml schemas).  Because of these differences, there isn't a good universal approach on the market, making it possible to get stuck in committee based standards, stove pipe proprietary approaches, compute intensive approaches, or incompatible approaches.
@@ -78,6 +77,10 @@ delete: [resource, params, callback]
 Same usage as .get(), but sends a DELETE request.
 
 Users of USM are free to define custom attributes to meet needs not yet forseen.  Universal Device Metadata(UDM) Specification is defined as a microfotmat for defining devices.  It references USM.  A device may only choose to expose services and no device details, though it is recommended that for every service, it optionally include a link to the device hosting the service using UDM.
+
+## Alternative Implementation 1: HASH-SETS
+
+It is possible to break down JSON into simple HASH-SET encodings.  The USM schema's notion of JSON objects with key attribute value sets is very easily represented in HASH-SET form.  One could implement a network protocol to transmit such sets simply and compactly over any number of transports.  JSON isn't neccessary as much as a structure to the data is necessary, in order to encapsulate heirarchy and relationships between data.  For constrained environments this iplementation will make more sense.  It is then possible to compact the data into a serialized format for wire transfer, such as in a TLV8 packet encoding, and transmit with fragmentation if needed.  This will be a requirement for transports with limits on packet size.  As such, if JSON isn't a requirement in alternative implementations, then HTTP is not a strict requirement.  More complex nested JSON structures would need flattening, but one could compensate for the complexity by packing more data into the key, and requiring more key prefixes per child object node to represent.
 
 # USM Schema
 
